@@ -1,21 +1,20 @@
 /* global data */
 /* exported data */
+
 var imgInput = document.getElementById('imageInput');
 var imgOutput = document.getElementById('imageOutput');
 var form = document.querySelector('form');
 
-var nextEntryId = 0;
-var nextEntryIdStorage = localStorage.getItem('code-journal-next-id');
-if (nextEntryIdStorage == null) {
-  nextEntryId = 0;
-} else {
-  nextEntryId = nextEntryIdStorage;
-}
+var data = {
+  view: 'entry-form',
+  entries: [],
+  editing: null,
+  nextEntryId: 1
+};
 
-var dataModel = [];
 var storage = localStorage.getItem('code-journal');
-if (storage === null) {
-  dataModel = [];
+if (storage !== null) {
+  data = JSON.parse(storage);
 }
 
 imgInput.addEventListener('blur', function (event) {
@@ -30,17 +29,16 @@ form.addEventListener('submit', function (event) {
   var notes = event.currentTarget[2].value;
 
   var formValue = {
-    id: nextEntryId,
+    id: data.nextEntryId,
     title: title,
     url: photoUrl,
     notes: notes
   };
 
-  dataModel.unshift(JSON.stringify(formValue));
-  nextEntryId++;
+  data.entries.unshift(formValue);
+  data.nextEntryId++;
 
-  localStorage.setItem('code-journal', dataModel);
-  localStorage.setItem('code-journal-next-id', nextEntryId);
+  localStorage.setItem('code-journal', JSON.stringify(data));
 
   form.reset();
   imgOutput.removeAttribute('src');
