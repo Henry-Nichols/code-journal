@@ -16,8 +16,6 @@ var dataModel = [];
 var storage = localStorage.getItem('code-journal');
 if (storage === null) {
   dataModel = [];
-} else {
-  dataModel = JSON.parse(storage);
 }
 
 imgInput.addEventListener('blur', function (event) {
