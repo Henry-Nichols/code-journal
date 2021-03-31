@@ -15,39 +15,53 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main>
-      <div class="left-column">
-        <header></header>
-      </div>
-      <div class="center-column">
-        <div data-view="entry-form">
-            <header>
-              Code Journal
-            </header>
-          <form id="form" >
-            <h1>New Entry</h1>
-            <div class="image-div">
-              <input type="image" id="imageOutput" class="image" src="./images/placeholder-image-square.jpg" alt="">
-              <div class="title-div">
-                <h3 class="title-header">Title</h3>
-                <input class="text-box" type="text" required>
-                <h3>Photo URL</h3>
-                <input class="text-box" id="imageInput" type="text" required>
-              </div>
-            </div>
-            <h3>Notes</h3>
-            <textarea name="" id="" cols="100" rows="10" required></textarea>
-            <div class="submit-div">
-              <button id = "submit-id" class="submit-btn" type="submit" >SAVE</button>
-            </div>
-          </form>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="column-full">
+          <h2>Code Journal</h2>
         </div>
       </div>
-      <div class="right-column">
-        <header>
+    </div>
+  </header>
 
-        </header>
-      </div>
+  <main>
+    <div class="container">
+      <form id="form" action="">
+        <div class="row">
+          <div class="column-full">
+            <h1>New Entry</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column-half">
+            <input type="image" id="imageOutput" class="image" src="./images/placeholder-image-square.jpg" alt="">
+          </div>
+          <div class="column-half">
+            <h3 class="title-header">Title</h3>
+            <input class="text-box" type="text" required>
+            <h3>Photo URL</h3>
+            <input class="text-box" id="imageInput" type="text" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column-full">
+            <h3>Notes</h3>
+            <textarea name="" id="" cols="100" rows="10" required></textarea>
+          </div>
+        </div>
+
+        <div class="row btn">
+          <div class="column-full">
+            <button id="submit-id" class="submit-btn" type="submit">SAVE</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
