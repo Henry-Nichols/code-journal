@@ -26,4 +26,8 @@ form.addEventListener('submit', function (event) {
   data.nextEntryId++;
   form.reset();
   imgOutput.setAttribute('src', './images/placeholder-image-square.jpg');
+  var entry = document.getElementById('entry-form');
+  entry.classList.add('hidden');
+  // var ul = document.getElementById('unlisted');
+  // ul.classList.add('hidden');
 });
