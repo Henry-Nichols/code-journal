@@ -27,42 +27,62 @@
   </header>
 
   <main>
-    <div class="container">
-      <form id="form" action="">
-        <div class="row">
-          <div class="column-full">
-            <h1>New Entry</h1>
+    <div id="entry-form" data-view="entry-form">
+      <div class="container">
+        <form id="form" action="">
+          <div class="row">
+            <div class="column-full">
+              <h1>New Entry</h1>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="column-half">
-            <input type="image" id="imageOutput" class="image" src="./images/placeholder-image-square.jpg" alt="">
+          <div class="row">
+            <div class="column-half">
+              <input type="image" id="imageOutput" class="image" src="./images/placeholder-image-square.jpg" alt="">
+            </div>
+            <div class="column-half">
+              <h3 class="title-header">Title</h3>
+              <input class="text-box" name="title" type="text" required>
+              <h3>Photo URL</h3>
+              <input class="text-box" name="url" id="imageInput" type="text" required>
+            </div>
           </div>
-          <div class="column-half">
-            <h3 class="title-header">Title</h3>
-            <input class="text-box" name="title" type="text" required>
-            <h3>Photo URL</h3>
-            <input class="text-box" name="url" id="imageInput" type="text" required>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="column-full">
-            <h3>Notes</h3>
-            <textarea name="notes" cols="100" rows="10" required></textarea>
+          <div class="row">
+            <div class="column-full">
+              <h3>Notes</h3>
+              <textarea name="notes" cols="100" rows="10" required></textarea>
+            </div>
           </div>
-        </div>
 
-        <div class="row btn">
-          <div class="column-full">
-            <button id="submit-id" class="submit-btn" type="submit">SAVE</button>
+          <div class="row btn">
+            <div class="column-full">
+              <button id="submit-id" class="submit-btn" type="submit">SAVE</button>
+            </div>
           </div>
-        </div>
 
-      </form>
+        </form>
+      </div>
     </div>
   </main>
+
+  <div id="view-entries" data-view="entries">
+    <div class="container">
+      <div class="row">
+        <div class="column-full headerAndButton">
+          <h1>Entries</h1>
+          <button id="new-btn-id" class="new-btn">NEW</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <ul id="unlisted">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>

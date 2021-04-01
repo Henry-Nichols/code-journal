@@ -6,6 +6,7 @@
   max-width: 575px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  /* border: 3px solid cyan; */
 }
 
 .row {
@@ -31,4 +32,15 @@
   .column-half {
     width: 50%;
   }
+}
+
+.entryRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+ul {
+  margin: 0%;
+  padding: 0%;
 }
