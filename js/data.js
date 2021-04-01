@@ -1,5 +1,7 @@
 /* exported data */
 
+var entryForm = document.getElementById('entry-form');
+
 var data = {
   view: 'entry-form',
   entries: [],
@@ -17,6 +19,7 @@ window.addEventListener('beforeunload', event => {
 });
 
 window.addEventListener('DOMContentLoaded', function (event) {
+  entryForm.classList.add('hidden');
   var ul = document.getElementById('unlisted');
   for (var i = 0; i < data.entries.length; i++) {
     var element = entryData(data.entries[i]);
@@ -27,19 +30,23 @@ window.addEventListener('DOMContentLoaded', function (event) {
 function entryData(journalEntry) {
 
   var row = document.createElement('div');
-  row.classList.add('row');
+  row.classList.add('entryRow');
+
+  var imageDiv = document.createElement('div');
+  imageDiv.classList.add('column-half');
+  row.appendChild(imageDiv);
 
   var columnImage = document.createElement('img');
-
-  columnImage.classList.add('column-half');
+  columnImage.classList.add('inputImage');
   columnImage.src = journalEntry.url;
-  row.appendChild(columnImage);
+  imageDiv.appendChild(columnImage);
 
   var columnHalfTwo = document.createElement('div');
   columnHalfTwo.classList.add('column-half');
   row.appendChild(columnHalfTwo);
 
   var headerTitle = document.createElement('h2');
+  headerTitle.classList.add('inputHeader');
   columnHalfTwo.appendChild(headerTitle);
   headerTitle.textContent = journalEntry.title;
 
