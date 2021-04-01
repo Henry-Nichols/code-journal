@@ -11,10 +11,9 @@ imgInput.addEventListener('blur', function (event) {
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-
-  var title = form.elements[0].value;
-  var photoUrl = form.elements[1].value;
-  var notes = form.elements[2].value;
+  var title = form.elements.title.value;
+  var photoUrl = form.elements.url.value;
+  var notes = form.elements.notes.value;
 
   var formValue = {
     id: data.nextEntryId,
