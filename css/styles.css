@@ -21,7 +21,7 @@ h3 {
 
 header {
   background-color: rgb(86, 43, 129);
-  font-size: 13px;
+  font-size: 14px;
   color: white;
 }
 
@@ -101,4 +101,24 @@ textarea {
   border-radius: 4px;
   margin-top: 5px;
 
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  justify-content:start;
+}
+
+.navHeader {
+  margin-left: 15px;
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.entryAnchor {
+  color: azure;
+  text-decoration: none;
+  cursor: pointer;
 }

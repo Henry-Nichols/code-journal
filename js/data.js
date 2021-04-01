@@ -1,6 +1,7 @@
 /* exported data */
 
 var entryForm = document.getElementById('entry-form');
+var ul = document.getElementById('unlisted');
 
 var data = {
   view: 'entry-form',
@@ -20,7 +21,6 @@ window.addEventListener('beforeunload', event => {
 
 window.addEventListener('DOMContentLoaded', function (event) {
   entryForm.classList.add('hidden');
-  var ul = document.getElementById('unlisted');
   for (var i = 0; i < data.entries.length; i++) {
     var element = entryData(data.entries[i]);
     ul.appendChild(element);
