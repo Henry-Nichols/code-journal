@@ -32,3 +32,14 @@
     width: 50%;
   }
 }
+
+.entryRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+ul {
+  margin: 0%;
+  padding: 0%;
+}
